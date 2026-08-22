@@ -84,6 +84,7 @@ static led_strip_handle_t configurar_led(void)
 }
 
 #if ENABLE_MIXING
+/* Mezcla dos colores de forma lineal por un factor `t` entre 0 y 1. */
 static color_t mezclar_colores(const color_t *a, const color_t *b, float t) {
     color_t mezclado = {
         .r = (uint8_t)(a->r + (b->r - a->r) * t),
@@ -96,6 +97,8 @@ static color_t mezclar_colores(const color_t *a, const color_t *b, float t) {
 #endif
 
 #if ENABLE_BREATHING
+/* Escala la intensidad de un color por un factor `t` entre 0 y 1. 
+* `t = 0` = apagado, `t = 1` = `c` original. */
 static color_t escalar_intensidad(const color_t *c, float t) {
     color_t escalado = {
         .r = (uint8_t)(c->r * t),

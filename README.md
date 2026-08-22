@@ -3,7 +3,7 @@
 
 # Hello Kaluga — App 1 (Clase 1)
 
-Firmware base de la **App 1** de la Clase 1. Hace **parpadear/ciclar el LED
+Firmware de la **App 1** de la Clase 1. Hace **parpadear/ciclar el LED
 RGB direccionable** (WS2812) de la placa **ESP32-S2-Kaluga-1** y **publica el
 estado por el monitor serie**. Es el primer contacto con un periférico real
 de la placa.
